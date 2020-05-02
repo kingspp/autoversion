@@ -21,7 +21,7 @@ let shaOrBranch = 'master'
 // Create version based on latest release
 const version = autoversion.getReleaseVersion(owner, repo, shaOrBranch);
 
-// Create version based on number of getCommitVersion
+// Create version based on number of commits
 let digits = 3
 const version = autoversion.getCommitVersion(owner, repo, shaOrBranch, digits);
 ```
@@ -37,7 +37,7 @@ let shaOrBranch = 'master'
 // Create version based on latest release
 const version = getReleaseVersion(owner, repo, shaOrBranch);
 
-// Create version based on number of getCommitVersion
+// Create version based on number of commits
 let digits = 3
 const version = getCommitVersion(owner, repo, shaOrBranch, digits);
 ```
