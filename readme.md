@@ -1,6 +1,6 @@
-# node-module-boilerplate
+# Autoversion 
 
-> Boilerplate to kickstart creating a Node.js module
+> Display Version on your websites using github releases / commits 
 
 This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
 
