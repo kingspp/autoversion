@@ -2,70 +2,78 @@
 
 > Display Version on your websites using github releases / commits 
 
-This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
-
-Also check out [`node-cli-boilerplate`](https://github.com/sindresorhus/node-cli-boilerplate).
-
-
 ## Getting started
 
-**Click the "Use this template" button.**
-
-Alternatively, create a new directory and then run:
-
-```
-$ curl -fsSL https://github.com/sindresorhus/node-module-boilerplate/archive/master.tar.gz | tar -xz --strip-components=1
-```
-
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
-
-
----
-
-**Remove everything from here and above**
-
----
-
-
-# unicorn-fun [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
-
-> My awesome module
-
+# Autoversion [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
 
 ## Install
 
 ```
-$ npm install unicorn-fun
+$ npm install autoversion-git
 ```
 
 
-## Usage
+## Usage - Require (Node)
 
 ```js
-const unicornFun = require('unicorn-fun');
+const autoversion = require('autoversion-git');
 
-unicornFun('unicorns');
-//=> 'unicorns & rainbows'
+let owner = 'getredash'
+let repo = 'redash'
+let shaOrBranch = 'master'
+// Create version based on latest release
+const version = autoversion.getReleaseVersion(owner, repo, shaOrBranch);
+
+// Create version based on number of getCommitVersion
+let digits = 3
+const version = autoversion.getCommitVersion(owner, repo, shaOrBranch, digits);
 ```
 
 
 ## API
 
-### unicornFun(input, options?)
+### getReleaseVersion(owner, repo)
 
-#### input
+#### owner
 
 Type: `string`
 
-Lorem ipsum.
+Owner of the github repository
 
-#### options
+#### repo
 
-Type: `object`
+Type: `string`
 
-##### postfix
+Repository Name
 
-Type: `string`\
-Default: `rainbows`
 
-Lorem ipsum.
+### getCommitVersion(owner, repo, shaOrBranch, digits)
+
+#### owner
+
+Type: `string`
+
+Owner of the github repository
+
+#### repo
+
+Type: `string`
+
+Repository Name
+
+#### shaOrBranch
+
+Type: `string`
+
+The option can take either sha - `6351cf255a30d166376737e831dea2cb4a1c39f9` or branch - `master`
+
+#### digits
+
+Type: `int`
+
+The number of digits to show
+ex: 1234 commits and digits=3 => returns 1.2.3
+
+
+
+
