@@ -1,10 +1,8 @@
-# Autoversion 
+# Autoversion [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
 
 > Display Version on your websites using github releases / commits 
 
 ## Getting started
-
-# Autoversion [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
 
 ## Install
 
@@ -12,11 +10,26 @@
 $ npm install autoversion-git
 ```
 
-
 ## Usage - Require (Node)
 
 ```js
 const autoversion = require('autoversion-git');
+
+let owner = 'getredash'
+let repo = 'redash'
+let shaOrBranch = 'master'
+// Create version based on latest release
+const version = autoversion.getReleaseVersion(owner, repo, shaOrBranch);
+
+// Create version based on number of getCommitVersion
+let digits = 3
+const version = autoversion.getCommitVersion(owner, repo, shaOrBranch, digits);
+```
+
+## Usage - VueJS/React 
+
+```js
+import {getCommitVersion, getReleaseVersion} from 'autoversion';
 
 let owner = 'getredash'
 let repo = 'redash'
@@ -74,7 +87,3 @@ Default: `3`
 
 The number of digits to show
 ex: 1234 commits and digits=3 => returns 1.2.3
-
-
-
-
