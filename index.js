@@ -29,10 +29,6 @@ function getFirstCommit(owner, repo) {
 const baseUrl = 'https://api.github.com';
 
 const getCommitVersion = function (owner, repo, shaOrBranch, digits) {
-
-	// let owner = 'getredash';
-	// let repo = 'redash';
-	// let sha = 'master';
 	try {
 		shaOrBranch = shaOrBranch || 'master';
 		digits = digits || 3;
