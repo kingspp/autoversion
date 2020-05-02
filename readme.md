@@ -2,6 +2,14 @@
 
 > Display Version on your websites using github releases / commits 
 
+## Example
+### Sample Repository
+![Header](https://github.com/kingspp/autoversion/blob/master/assets/inp.png?raw=true)
+
+### Fetched Repository
+![Header](https://github.com/kingspp/autoversion/blob/master/assets/exp1.png?raw=true)
+![Footer](https://github.com/kingspp/autoversion/blob/master/assets/exp2.png?raw=true)
+
 ## Getting started
 
 ## Install
