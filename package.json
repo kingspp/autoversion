@@ -1,6 +1,6 @@
 {
 	"name": "autoversion",
-	"version": "0.0.1",
+	"version": "0.1.2",
 	"description": "Display version on websites using github release / commits",
 	"license": "MIT",
 	"repository": "https://github.com/kingspp/autoversion",
@@ -24,8 +24,5 @@
 		"github"
 	],
 	"dependencies": {},
-	"devDependencies": {
-		"eslint": "^6.8.0",
-		"eslint-plugin-vue": "^6.2.2"
-	}
+	"devDependencies": {}
 }
