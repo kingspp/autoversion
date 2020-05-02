@@ -35,11 +35,11 @@ let owner = 'getredash'
 let repo = 'redash'
 let shaOrBranch = 'master'
 // Create version based on latest release
-const version = autoversion.getReleaseVersion(owner, repo, shaOrBranch);
+const version = getReleaseVersion(owner, repo, shaOrBranch);
 
 // Create version based on number of getCommitVersion
 let digits = 3
-const version = autoversion.getCommitVersion(owner, repo, shaOrBranch, digits);
+const version = getCommitVersion(owner, repo, shaOrBranch, digits);
 ```
 
 
