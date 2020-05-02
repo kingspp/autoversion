@@ -1,5 +1,5 @@
 {
-	"name": "autoversion",
+	"name": "autoversion-git",
 	"version": "0.1.2",
 	"description": "Display version on websites using github release / commits",
 	"license": "MIT",
