@@ -70,6 +70,7 @@ The option can take either sha - `6351cf255a30d166376737e831dea2cb4a1c39f9` or b
 #### digits
 
 Type: `int`
+Default: `3`
 
 The number of digits to show
 ex: 1234 commits and digits=3 => returns 1.2.3
